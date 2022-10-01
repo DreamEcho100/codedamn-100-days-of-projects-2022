@@ -1,0 +1,95 @@
+*,
+*::before,
+*::after {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+a {
+    color: inherit;
+    text-decoration: none;
+}
+
+body {
+    background-color: #242629;
+}
+
+.w-full {
+    width: 100%;
+}
+
+.h-full {
+    height: 100%;
+}
+
+.aspect-square {
+    aspect-ratio: 1/1;
+}
+
+.aspect-video {
+    aspect-ratio: 16/9;
+}
+
+.overflow-hidden {
+    overflow: hidden;
+}
+
+.object-cover {
+    object-fit: cover;
+}
+
+.object-center {
+    object-position: center;
+}
+
+#gallery-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(min(30rem, 100%), 1fr));
+}
+#gallery-container article {
+    aspect-ratio: 16/9;
+    overflow: hidden;
+    position: relative;
+    display: flex;
+    align-items: flex-end;
+}
+#gallery-container article .gallery-image {
+    width: 100%;
+    height: 100%;
+    objectfit: cover;
+    object-size: center;
+
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    z-index: -1;
+}
+#gallery-container article .title {
+    color: white;
+    padding: 0.5rem;
+}
+
+#footer-title {
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    background-color: #1f2224;
+    color: white;
+    padding: 0.5rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+#about a {
+    display: flex;
+    align-items: center;
+}
+#about a img {
+    aspect-ratio: 1/1;
+    height: fit-content;
+    width: 1.4rem;
+}
