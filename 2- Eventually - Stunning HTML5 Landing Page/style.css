@@ -1,0 +1,197 @@
+@font-face {
+    font-family: "Roboto";
+    src: url("./assets/fonts/Roboto-Bold.ttf")  format('truetype'), url("./assets/fonts/Roboto-Regular.ttf")  format('truetype');
+}
+
+
+*,
+*::after,
+*::before {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+:root {
+    --bg-color-1: #000000;
+    --bg-color-2: #1cb495;
+
+    --text-color-1: #000000;
+    --text-color-2: #ffffff;
+    --text-color-3: rgb(128, 131, 132);
+}
+
+html,
+body {
+    width: 100%;
+    height: 100%;
+}
+
+body {
+    font-family: 'Roboto', sans-serif;
+}
+
+button {
+    cursor: pointer;
+}
+
+a {
+    text-decoration: none;
+    color: inherit;
+}
+
+small {
+    font-size: 80%;
+}
+
+.eventually-section {
+    font-size: 1.2rem;
+    background-image: linear-gradient(to bottom right, rgb(0, 0, 0), rgba(0, 0, 0, 0.8)), url("./assets/images/bg.jpg");
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    width: 100%;
+    height: 100vh;
+    max-height: 100rem;
+    min-height: fit-content;
+    overflow-x: hidden;
+    color: var(--text-color-3);
+    font-weight: 500;
+    line-height: 1.7;
+    display: flex;
+    align-items: flex-end;
+    justify-content: flex-start;
+}
+
+.eventually-section .container {
+    padding: 4rem;
+    display: flex;
+    flex-direction: column;
+}
+
+.eventually-section header .credit-to {
+    border-bottom: 0.1rem dotted var(--text-color-3);
+}
+
+.eventually-section header h1 {
+    color: var(--text-color-2);
+    font-size: 3rem;
+}
+
+.eventually-section header p {
+    margin: 0.5rem 0;
+    max-width: 650px;
+    font-weight: bold;
+}
+
+.eventually-section form {
+    margin-bottom: 4rem;
+    margin-bottom: min(calc(4rem + 15vh), 12rem);
+    display: flex;
+}
+
+.eventually-section form .seperator {
+    padding: 1rem;
+}
+
+.eventually-section form label input,
+.eventually-section form button[type=submit] {
+    padding: 0.5rem;
+    border-radius: 0.25rem;
+}
+
+.eventually-section form label input {
+    background-color: transparent;
+    border: 0.1rem var(--text-color-3) solid;
+    font-size: inherit;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.eventually-section form label {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.eventually-section form button[type=submit] {
+    border: 0.1rem var(--text-color-3) solid;
+    font-size: inherit;
+    font-weight: 700;
+    color: var(--text-color-2);
+    background-color: var(--bg-color-2);
+    transition: all 0.3s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+}
+.eventually-section form button[type=submit]:hover {
+    backdrop-filter: brightness(0.5);
+    transition: all 0.3s cubic-bezier(0.39, 0.575, 0.565, 1);
+}
+.eventually-section form button[type=submit]:focus {
+    backdrop-filter: brightness(1.2);
+    border-radius: 0;
+    transition: all 0.3s cubic-bezier(0.165, 0.84, 0.44, 1);
+}
+
+.eventually-section footer {
+    display: flex;
+    flex-direction: column;
+}
+
+.eventually-section footer .social-icons-conatiner .seperator {
+    padding: 0.5rem;
+}
+
+.eventually-section footer .social-icons-conatiner a {
+    width: 1rem;
+    height: 1rem;
+    display: inline-flex;
+}
+.eventually-section footer .social-icons-conatiner a svg {
+    width: 100%;
+    max-width: 100%;
+    height: 100%;
+    max-height: 100%;
+    color: var(--text-color-3);
+}
+
+.eventually-section form,
+.eventually-section form label {
+    flex-direction: column;
+}
+.eventually-section form label,
+.eventually-section form label input,
+.eventually-section form button[type=submit] {
+    width: 100%;
+}
+
+@media screen and (min-width: 640px) {
+    .eventually-section form,
+    .eventually-section form label {
+        flex-direction: row;
+    }
+    .eventually-section form label {
+        width: initial;
+    }
+    .eventually-section form button[type=submit] {
+        width: initial;
+    }
+    
+    .eventually-section form .seperator {
+        padding: 0.5rem;
+    }
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
